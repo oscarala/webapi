@@ -1,0 +1,28 @@
+@WebApi_HostAddress = http://localhost:5076
+
+### Alle Todos
+GET {{WebApi_HostAddress}}/api/todos
+Accept: application/json
+
+### Todo anlegen
+POST {{WebApi_HostAddress}}/api/todos
+Content-Type: application/json
+
+{
+  "title": "Einkaufen gehen"
+}
+
+### Einzelnes Todo
+GET {{WebApi_HostAddress}}/api/todos/1
+
+### Todo aktualisieren
+PUT {{WebApi_HostAddress}}/api/todos/1
+Content-Type: application/json
+
+{
+  "title": "Einkaufen gehen",
+  "isDone": true
+}
+
+### Todo löschen
+DELETE {{WebApi_HostAddress}}/api/todos/1
